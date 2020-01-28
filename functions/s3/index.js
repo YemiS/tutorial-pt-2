@@ -1,4 +1,4 @@
-import  S3 from 'aws-sdk/clients/s3';
+const  S3 = require('aws-sdk/clients/s3');
 
 const writeS3 = async (event, context) => {
   
