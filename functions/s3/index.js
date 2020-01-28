@@ -18,4 +18,4 @@ const writeS3 = async (event, context) => {
         console.log('unsuccessful attempt');
     }
 }
-export  { writeS3 }
+module.exports = { writeS3 }
