@@ -10,7 +10,7 @@ module.exports = {
         key: '~/.ssh/tutorial.pem',
         ref: 'origin/master',
         repo: 'git@github.com:YemiS/tutorial-pt-2.git',
-        path: '/home/ubuntu/tutorial-2',
+        path: '/tutorial-2',
         'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
       }
     }
