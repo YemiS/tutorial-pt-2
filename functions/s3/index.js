@@ -1,6 +1,8 @@
+import { ConfigurationServicePlaceholders } from 'aws-sdk/lib/config_service_placeholders';
+
 const  S3 = require('aws-sdk/clients/s3');
 
-const writeS3 = () => {
+const writeS3 = async (event, context, callback) => {
   
   const s3 = new S3();
   const params = {
@@ -9,13 +11,13 @@ const writeS3 = () => {
  }
 
   try {
-        s3.putObject(params).promise();
-       // callback(null, `a log written successfully`);
-       console.log('a log written successfully')
+        await s3.putObject(params).promise();
+        //callback(null, `a log written successfully`);
+        console.log(null, `a log sent successfully`);
     }
     catch (error) {
         //callback(error.message);
-        console.log('unsuccessful attempt');
+        console.log(error.message);
     }
 }
-module.exports = { writeS3 }
+export  { writeS3 }
