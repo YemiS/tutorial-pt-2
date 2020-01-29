@@ -1,6 +1,6 @@
 const  S3 = require('aws-sdk/clients/s3');
 
-const writeS3 = async (event, context) => {
+const writeS3 = () => {
   
   const s3 = new S3();
   const params = {
@@ -9,7 +9,7 @@ const writeS3 = async (event, context) => {
  }
 
   try {
-        await s3.putObject(params).promise();
+        s3.putObject(params).promise();
        // callback(null, `a log written successfully`);
        console.log('a log written successfully')
     }
