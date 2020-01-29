@@ -32,7 +32,7 @@ const writeS3 = (options) => {
             "key3": "value3"
           }
  lambda.invoke({
-    FunctionName: ':step-function-test-dev-writeS3',
+    FunctionName: 'step-function-test-dev-writeS3',
     Payload: JSON.stringify(event, null, 2) // pass params
   }, function(error, data) {
     if (error) {
