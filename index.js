@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const adsS3 = require('./functions/s3/index');
+const adsS3 = require('./functions/s3');
 
 app.get('/', adsS3.writeS3());
 

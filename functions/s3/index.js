@@ -1,7 +1,5 @@
 const  S3 = require('aws-sdk/clients/s3');
 
-
-  
 // route
 const writeS3 = () => { 
     console.log('output')
