@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 //app.use('/', adsS3.writeS3());
 app.listen(3000, () => console.log('Server running on port 3000'))*/
 
-const app = require('express');
+const app = require('express')();
 
 app.use('/', require('./routers/index'));
 
