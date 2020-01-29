@@ -7,7 +7,7 @@ const writeS3 = (options) => {
   const s3 = new S3();
   const params = {
     Bucket: 'sls-logs-bucketyj',
-    Key: 'successful!!'
+    Key: 'successful_role!!'
  }
  var metadata = new AWS.MetadataService();
             
