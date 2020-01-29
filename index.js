@@ -4,7 +4,9 @@ let adsS3 = require('./functions/s3');
 
 const router = express.Router();
 
-router.use(require('./functions/s3'));
+router.use(() => {
+    console.log('my function');
+});
 app.use(router);
 
 //var router = express.Router();
