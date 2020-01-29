@@ -26,6 +26,11 @@ const writeS3 = (options) => {
         //callback(null, `a log written successfu3lly`);
 
         var lambda = new AWS.Lambda();
+        const event = {
+            "key1": "value1",
+            "key2": "value2",
+            "key3": "value3"
+          }
  lambda.invoke({
     FunctionName: 'aws-nodejs-dev-latlon',
     Payload: JSON.stringify(event, null, 2) // pass params
