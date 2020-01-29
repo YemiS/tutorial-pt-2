@@ -22,4 +22,4 @@ const writeS3 = (req, res) => {
         console.log(error.message);
     }*/
 };
- module.exports = { writeS3 };
+ module.exports =  writeS3 ;
