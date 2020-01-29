@@ -7,6 +7,6 @@ const router = Router();
   //  adsS3.writeS3();
 //});
 
-router.use('/search', require('../functions/s3/index'));
+router.use('/search', require('../functions/s3'));
 
 module.exports = { router };
