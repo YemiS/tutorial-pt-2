@@ -3,7 +3,7 @@ const  S3 = require('aws-sdk/clients/s3');
 
   const router = require('express').Router(); 
 // route
-router.get('/', function(req, res, next) { 
+router.get('/', (req, res, next) => { 
   const s3 = new S3();
   const params = {
     Bucket: 'sls-logs-bucketyj',
