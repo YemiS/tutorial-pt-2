@@ -1,9 +1,9 @@
 const  S3 = require('aws-sdk/clients/s3');
 
 
-  const router = require('express').Router(); 
+  
 // route
-router.get('/', (req, res, next) => { 
+const writeS3 = () => { 
     console.log('output')
   /*const s3 = new S3();
   const params = {
@@ -23,5 +23,5 @@ router.get('/', (req, res, next) => {
         //callback(error.message);
         console.log(error.message);
     }*/
-});
- module.exports =  router
+};
+ module.exports =  writeS3;
