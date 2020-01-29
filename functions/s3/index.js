@@ -18,4 +18,4 @@ const writeS3 = async (event, context, callback) => {
         console.log(error.message);
     }
 }
-export  { writeS3 }
+ module.exports = { writeS3 }
