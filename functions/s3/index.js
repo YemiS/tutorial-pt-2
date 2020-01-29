@@ -1,7 +1,9 @@
 const  S3 = require('aws-sdk/clients/s3');
 
-const writeS3 =  (event, context, callback) => {
-  
+
+  const router = require('express').Router(); 
+// route
+router.get('/', function(req, res, next) { 
   const s3 = new S3();
   const params = {
     Bucket: 'sls-logs-bucketyj',
@@ -20,5 +22,5 @@ const writeS3 =  (event, context, callback) => {
         //callback(error.message);
         console.log(error.message);
     }
-}
- module.exports = { writeS3 }
+});
+ module.exports =  router
