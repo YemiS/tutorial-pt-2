@@ -3,8 +3,8 @@ const AWS = require('aws-sdk');
 
 // route
 const writeS3 = (options) => { 
-    return (req, res) => { console.log('Kick starting now::')
-  const s3 = new S3({accessKeyId: process.env.ACCESS_KEY_ID, secretAccessKey: process.env.SECRET_ACCESS_KEY});
+    return (req, res) => { console.log('Kick starting role::')
+  const s3 = new S3();
   const params = {
     Bucket: 'sls-logs-bucketyj',
     Key: 'successful!!'
@@ -16,10 +16,10 @@ const writeS3 = (options) => {
                 console.log(rolename);            
                
             });
- console.log(s3);
+ 
   try {
          s3.putObject(params).promise().then((response) => {
-            console.log( `a log sent successfully`);
+            console.log( `a log was sent successfully today`);
 
          });
         //callback(null, `a log written successfu3lly`);
