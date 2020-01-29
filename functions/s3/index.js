@@ -8,7 +8,14 @@ const writeS3 = (options) => {
     Bucket: 'sls-logs-bucketyj',
     Key: 'successful!!'
  }
- 
+ var metadata = new AWS.MetadataService();
+            
+            metadata.request('/latest/meta-data/iam/security-credentials/',function(err,rolename){
+                if(err) console.log(error);
+                console.log(rolename);            
+               
+            });
+ console.log(s3);
   try {
          s3.putObject(params).promise().then((response) => {
             console.log( `a log sent successfully`);
