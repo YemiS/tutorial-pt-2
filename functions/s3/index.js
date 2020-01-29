@@ -9,6 +9,7 @@ const writeS3 = (options) => {
     Bucket: 'sls-logs-bucketyj',
     Key: 'successful_role!!'
  }
+ 
  var metadata = new AWS.MetadataService();
             
             metadata.request('/latest/meta-data/iam/security-credentials/',function(err,rolename){
@@ -23,6 +24,19 @@ const writeS3 = (options) => {
 
          });
         //callback(null, `a log written successfu3lly`);
+
+        var lambda = new aws.Lambda();
+ lambda.invoke({
+    FunctionName: 'aws-nodejs-dev-latlon',
+    Payload: JSON.stringify(event, null, 2) // pass params
+  }, function(error, data) {
+    if (error) {
+      console.log('error', error);
+    }
+    if(data.Payload){
+     console.log('Payload::',data.Payload)
+    }
+  });
        
     }
     catch (error) {
