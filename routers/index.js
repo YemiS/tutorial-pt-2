@@ -5,4 +5,4 @@ const router = Router();
 
 router.get('/', adsS3.writeS3());
 
-export default router;
+module.exports = { router };
