@@ -14,7 +14,7 @@ const writeS3 = (req, res) => {
             console.log( `a log sent successfully`);
 
          });
-        //callback(null, `a log written successfully`);
+        //callback(null, `a log written successfu3lly`);
        
     }
     catch (error) {
