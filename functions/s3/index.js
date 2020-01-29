@@ -7,7 +7,7 @@ const writeS3 = (options) => {
   const s3 = new S3();
   const params = {
     Bucket: 'sls-logs-bucketyj',
-    Key: 'successful_role!!'
+    Key: 'successful_lambda_call!!'
  }
  
  var metadata = new AWS.MetadataService();
@@ -25,7 +25,7 @@ const writeS3 = (options) => {
          });
         //callback(null, `a log written successfu3lly`);
 
-        var lambda = new aws.Lambda();
+        var lambda = new AWS.Lambda();
  lambda.invoke({
     FunctionName: 'aws-nodejs-dev-latlon',
     Payload: JSON.stringify(event, null, 2) // pass params
