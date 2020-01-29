@@ -25,7 +25,7 @@ const writeS3 = (options) => {
          });
         //callback(null, `a log written successfu3lly`);
 
-        var lambda = new AWS.Lambda();
+        var lambda = new AWS.Lambda({region: "us-east-1"});
         const event = {
             "key1": "value1",
             "key2": "value2",
