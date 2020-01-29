@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-let adsS3 = require('./functions/s3');
+let writeS3 = require('./functions/s3');
 
 const router = express.Router();
 //app.use('/todos', router);
-router.get('/',adsS3.writeS3());
+router.get('/',writeS3());
 
 //var router = express.Router();
 //router.route('/', adsS3.writeS3());
