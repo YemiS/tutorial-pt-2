@@ -2,8 +2,8 @@ const  S3 = require('aws-sdk/clients/s3');
 
 // route
 const writeS3 = (options) => { 
-    return (req, res) => { console.log('Kick starting::')}
- /* const s3 = new S3();
+    return (req, res) => { console.log('Kick starting now::')
+  const s3 = new S3();
   const params = {
     Bucket: 'sls-logs-bucketyj',
     Key: 'success!!'
@@ -20,6 +20,7 @@ const writeS3 = (options) => {
     catch (error) {
         //callback(error.message);
         console.log(error.message);
-    }*/
+    }
+}
 };
  module.exports =  writeS3 ;
